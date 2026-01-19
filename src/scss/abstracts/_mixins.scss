@@ -1,0 +1,24 @@
+@use "./variables" as v;
+@use "./functions" as f;
+
+@mixin font-config($family: barlow, $size: body-medium, $weight: regular) {
+    font-family: f.get-font-family($family);
+    font-size: f.get-font-size($family, $size);
+    font-weight: f.get-font-weight($weight);
+}
+
+@mixin responsive($breakpoint, $type: "min") {
+    @media screen and (#{$type}-width: f.get-breakpoint($breakpoint)) {
+        @content;
+    }
+}
+
+@mixin flexbox($direction: row, $justify: center, $items: flex-start, $self: null, $gap: null, $wrap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+    align-self: $self;
+    gap: $gap;
+    flex-wrap: $wrap;
+}

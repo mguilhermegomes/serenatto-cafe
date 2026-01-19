@@ -1,0 +1,57 @@
+@use "./variables" as v;
+@use "sass:map";
+
+@function get-color($color) {
+    @return map.get(v.$colors, $color);
+}
+
+@function get-breakpoint($breakpoint) {
+    @return map.get(v.$breakpoints, $breakpoint);
+}
+
+@function get-font-family($family) {
+    // Armazena a familia da fonte
+    $family-config: map.get(v.$typography, $family);
+
+    // Verifica se a familia passada realmente existe
+    @if $family-config == null {
+        @error "Font-family #{$family} não existente em $typography";
+    }
+
+    // Retorna a familia da fonte desejada
+    @return map.get($family-config, family);
+}
+
+@function get-font-size($family, $size) {
+    // Armazena a familia da fonte
+    $family-config: map.get(v.$typography, $family);
+
+    // Verifica se a familia passada realmente existe
+    @if $family-config == null {
+        @error "Font-family #{$family} não existente em $typography";
+    }
+
+    // Armazena o tamanho da fonte
+    $size-config: map.get($family-config, sizes);
+
+    // Verifica se o tamanho passado realmente existe
+    @if $size-config == null {
+        @error "Font-size #{$size} não existente em #{$family}";
+    }
+
+    // Retorna o tamanho da fonte desejado
+    @return map.get($size-config, $size);
+}
+
+@function get-font-weight($weight) {
+    // Armazena o peso da fonte
+    $weight-config: map.get(v.$typography, weights);
+
+    // Verifica se o peso passado realmente existe
+    @if $weight-config == null {
+        @error "Font-weight #{$weight} não existe em $typography";
+    }
+
+    // Retorna o peso da fonte desejado
+    @return map.get($weight-config, $weight);
+}
