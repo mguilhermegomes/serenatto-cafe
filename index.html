@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serenatto Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link
+      rel="shortcut icon"
+      href="./public/assets/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="container">
+        <a
+          href="#"
+          class="cabecalho__logo"
+          aria-label="Serenatto Café & Bistrô"
+        >
+          <img
+            src="./public/assets/header/logo-maior.png"
+            alt="Serenatto Café & Bistrô"
+          />
+        </a>
+        <button
+          class="cabecalho__menu"
+          id="menu-hamburguer"
+          aria-label="Abrir menu"
+        >
+          <span class="menu-icon"></span>
+        </button>
+        <div class="cabecalho__acoes">
+          <nav class="nav" aria-label="Menu principal">
+            <ul class="nav__lista">
+              <li class="nav__item">
+                <a href="#inicio" class="nav__link">Início</a>
+              </li>
+              <li class="nav__item">
+                <a href="#sobre" class="nav__link">Sobre</a>
+              </li>
+              <li class="nav__item">
+                <a href="#contato" class="nav__link">Contato</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="modo-noturno__container">
+            <input
+              type="checkbox"
+              name="modo noturno"
+              id="modo-noturno-botao-header"
+            />
+            <label for="modo-noturno-botao" class="modo-noturno__trocar">
+              <span class="modo-noturno__slider"></span>
+              <p class="modo-noturno__texto">Modo noturno</p>
+            </label>
+          </div>
+        </div>
+        <aside class="sidebar" aria-label="Menu lateral">
+          <div class="sidebar__top">
+            <a href="#" class="siderbar__logo">
+              <img
+                src="./public/assets/header/logo-mobile.png"
+                alt="Serenatto Café & Bistrô"
+              />
+            </a>
+            <button
+              class="sidebar__fechar"
+              id="menu-fechar"
+              aria-label="Fechar menu"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="sidebar__acoes">
+            <nav class="nav sidebar-nav" aria-label="Menu lateral principal">
+              <ul class="nav__lista">
+                <li class="nav__item">
+                  <a href="#inicio" class="nav__link">Início</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#sobre" class="nav__link">Sobre</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#contato" class="nav__link">Contato</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="modo-noturno__container">
+              <input
+                type="checkbox"
+                name="modo noturno"
+                id="modo-noturno-botao-sidebar"
+              />
+              <label for="modo-noturno-botao" class="modo-noturno__trocar">
+                <span class="modo-noturno__slider"></span>
+                <p class="modo-noturno__texto">Modo noturno</p>
+              </label>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+    <main>
+      <section class="banner banner--principal">
+        <div class="container">
+          <img src="./public/assets/logo-nav.png" alt="Logo do Serenatto" />
+          <h1 class="banner__titulo">
+            Sua pausa para <span>desfrutar a vida</span>
+          </h1>
+          <p class="banner__descricao">
+            Boas-vindas ao <span>Bistrô Serenatto!</span> Um ambiente
+            aconchegante e acolhedor para apreciar um bom café.
+          </p>
+        </div>
+      </section>
+      <section class="nossos-servicos">
+        <div class="container">
+          <h2 class="nossos-servicos__titulo">Nossos servicos</h2>
+          <div class="nossos-servicos__card-container">
+            <article class="card" aria-label="Serviço de café & bistrô">
+              <img
+                src="./public/assets/servicos/cafe-e-bistro.png"
+                alt="Balcão de padaria com produtos diversos"
+              />
+              <h3 class="card__titulo">Café & Bistrô</h3>
+              <p class="card__descricao">
+                Nosso bistrô oferece uma ampla variedade de cafés, smoothies,
+                deliciosos salgados e sobremesas. Uma excelente opção para quem
+                busca um lugar tranquilo e aconchegante.
+              </p>
+            </article>
+            <article class="card" aria-label="Serviço de buffet">
+              <img
+                src="./public/assets/servicos/buffet.png"
+                alt="Balcão de buffet com alimentos diversos"
+              />
+              <h3 class="card__titulo">Buffet</h3>
+              <p class="card__descricao">
+                Buffet e catering personalizado para eventos, produções e
+                celebrações. Com um menu variado e adaptável às preferências do
+                cliente, atendimento atencioso e profissional.
+              </p>
+            </article>
+            <article class="card" aria-label="Serviço de delivery">
+              <img
+                src="./public/assets/servicos/delivery.png"
+                alt="Alimentos em uma embalagem de papelão"
+              />
+              <h3 class="card__titulo">Delivery</h3>
+              <p class="card__descricao">
+                Para quem deseja desfrutar no conforto de casa, oferecemos
+                delivery dos produtos. Com o mesmo cardápio variado de sempre,
+                sem perder nosso sabor e padrão de qualidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="banner banner--secundario">
+        <h2 class="banner__titulo">Portas abertas para todos os públicos</h2>
+        <p class="banner__descricao">
+          Nosso espaço é aconchegante, pet friendly, preparado para receber
+          crianças e pessoas com deficiência. Também oferecemos ambiente de
+          coworking!
+        </p>
+      </section>
+      <section class="nossos-produtos">
+        <div class="container">
+          <h2 class="nossos-produtos__titulo">Nossos produtos</h2>
+          <div class="nossos-produtos__produtos-container">
+            <div class="produto" data-modal="modal-1">
+              <img
+                src="./public/assets/produtos/cafe-tradicional.png"
+                alt="Xícara de café tradicional"
+              />
+              <h3 class="produto__titulo">Cafés Tradicionais</h3>
+            </div>
+            <div class="produto">
+              <img
+                src="./public/assets/produtos/cafe-especial.png"
+                alt="Xícara de café especial"
+              />
+              <h3 class="produto__titulo">Cafés Especiais</h3>
+            </div>
+            <div class="produto">
+              <img
+                src="./public/assets/produtos/smoothies.png"
+                alt="Copos com smoothie e vitamina"
+              />
+              <h3 class="produto__titulo">Smoothies e Vitaminas</h3>
+            </div>
+            <div class="produto">
+              <img
+                src="./public/assets/produtos/paes.png"
+                alt="Cesta de pães e focaccias"
+              />
+              <h3 class="produto__titulo">Pães e Focaccias</h3>
+            </div>
+            <div class="produto">
+              <img
+                src="./public/assets/produtos/bolo.png"
+                alt="Bolo confeitado"
+              />
+              <h3 class="produto__titulo">Doces</h3>
+            </div>
+            <div class="produto">
+              <img src="./public/assets/produtos/quiche.png" alt="Quiche" />
+              <h3 class="produto__titulo">salgados</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="banner banner--terciario"></section>
+      <section class="contato">
+        <div class="container">
+          <div class="contato__container">
+            <h3 class="contato__titulo">Entre em contato!</h3>
+            <form class="form" id="formulario-contato">
+              <div class="form__campo">
+                <label for="form__campo-nome">Nome *</label>
+                <input
+                  type="text"
+                  id="form__campo-nome"
+                  class="form__campo-nome"
+                  name="nome"
+                  placeholder="Nome"
+                  aria-label="Seu nome completo"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form__campo-email">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="form__campo-email"
+                  class="form__campo-email"
+                  placeholder="Email"
+                  aria-label="Seu email"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form__campo-telefone">Telefone *</label>
+                <input
+                  type="tel"
+                  name="telefone"
+                  id="form__campo-telefone"
+                  class="form__campo-telefone"
+                  placeholder="Telefone"
+                  aria-label="Seu telefone"
+                  required
+                />
+              </div>
+              <div class="form__campo">
+                <label for="form-campo-contato">Contato *</label>
+                <select
+                  name="contato"
+                  id="form-campo-contato"
+                  class="form__campo-contato"
+                  aria-label="Sua preferência de contato"
+                  required
+                >
+                  <option selected disabled class="campo-contato-opcao">
+                    Preferência de contato
+                  </option>
+                  <option value="1" class="form__campo-opcao">WhatsApp</option>
+                  <option value="2" class="form__campo-opcao">Email</option>
+                  <option value="3" class="form__campo-opcao">Ligação</option>
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <div class="container">
+        <p class="rodape__creditos">
+          2023 &copy; Desenvolvido por Guilherme Gomes | Projeto fictício da
+          Alura sem fins comerciais
+        </p>
+        <div class="rodape__icons">
+          <ul class="rodape__icons-lista">
+            <li class="rodape__icons-item">
+              <a
+                href="https://web.whatsapp.com/"
+                class="rodape__icons-link"
+                aria-label="WhatsApp"
+              >
+                <img
+                  src="./public/assets/footer/whats.png"
+                  alt="Logo do WhatsApp"
+                />
+              </a>
+            </li>
+            <li class="rodape__icons-item">
+              <a
+                href="https://instagram.com"
+                class="rodape__icons-link"
+                aria-label="Instagram"
+              >
+                <img
+                  src="./public/assets/footer/insta.png"
+                  alt="Logo do Instagram"
+                />
+              </a>
+            </li>
+            <li class="rodape__icons-item">
+              <a
+                href="https://x.com"
+                class="rodape__icons-link"
+                aria-label="Twitter"
+              >
+                <img
+                  src="./public/assets/footer/twitter.png"
+                  alt="Logo do Twitter"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!--Modal 1-->
+    <div id="modal-background-1" class="modal-background"></div>
+    <dialog id="modal-1" class="modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__titulo">Cafés Tradicionais</h2>
+          <button
+            id="modal-botao-fechar"
+            class="modal__fechar-botao"
+            aria-label="Fechar modal"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="modal__body">
+          <img
+            src="./public/assets/produtos/cafe-tradicional.png"
+            alt="Xícara de café tradicional"
+          />
+          <p class="modal__descricao">
+            O café Serenatto é conhecido por seus blends tradicionais e
+            saborosos, que agradam aos amantes da bebida. Nossos grãos são
+            cuidadosamente selecionados e torrados para produzir um aroma rico e
+            sabor equilibrado.
+          </p>
+          <p class="modal__descricao">
+            Entre os cafés mais tradicionais da casa, destaca-se o "Café
+            Serenatto", um blend exclusivo de grãos com notas de chocolate e
+            caramelo. Outra opção popular é o "Café Italiano", um café expresso
+            encorpado e intenso. Já o "Café Cappuccino" é uma escolha clássica
+            para quem prefere uma bebida cremosa e suave.
+          </p>
+        </div>
+        <div class="modal__footer">
+          <button
+            id="modal-botao-fechar-footer"
+            class="modal__fechar-botao-footer"
+            aria-label="Fechar modal"
+          >
+            Fechar janela
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <!--Modal 2-->
+    <div id="modal-background-2" class="modal-background"></div>
+    <dialog id="modal-2" class="modal">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__titulo">Cafés Especiais</h2>
+          <button
+            id="modal-botao-fechar"
+            class="modal__fechar-botao"
+            aria-label="Fechar modal"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="modal__body">
+          <img
+            src="./public/assets/produtos/cafe-especial.png"
+            alt="Xícara de café especial"
+          />
+          <p class="modal__descricao">
+            Somos conhecidos também por nossos cafés especiais, que são
+            cuidadosamente preparados com grãos selecionados de alta qualidade e
+            técnicas de preparo precisas.
+          </p>
+          <p class="modal__descricao">
+            Entre as opções de cafés especiais do Café & Bistrô Serenatto,
+            destacamos o café aeropress, que é preparado com uma técnica de
+            imersão e pressão, resultando em uma bebida de sabor intenso e aroma
+            acentuado. Outra opção popular é o café Hario V60, que é preparado
+            com um filtro de papel em formato de cone e resulta em uma bebida
+            limpa e suave, ressaltando as notas sensoriais dos grãos. Além
+            disso, oferecemos uma variedade de bebidas geladas, como o café
+            gelado, que é preparado com grãos torrados escuros e servido com
+            gelo e leite, resultando em uma bebida refrescante e saborosa.
+          </p>
+        </div>
+        <div class="modal__footer">
+          <button
+            id="modal-botao-fechar-footer"
+            class="modal__fechar-botao-footer"
+            aria-label="Fechar modal"
+          >
+            Fechar janela
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
