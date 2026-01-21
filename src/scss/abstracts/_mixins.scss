@@ -1,7 +1,7 @@
 @use "./variables" as v;
 @use "./functions" as f;
 
-@mixin font-config($family: barlow, $size: body-medium, $weight: regular) {
+@mixin font-config($size: body-small, $weight: regular, $family: barlow) {
     font-family: f.get-font-family($family);
     font-size: f.get-font-size($family, $size);
     font-weight: f.get-font-weight($weight);
@@ -21,4 +21,12 @@
     align-self: $self;
     gap: $gap;
     flex-wrap: $wrap;
+}
+
+@mixin custom-border($color, $size: 1px, $style: solid) {
+    border: $size $style $color;
+}
+
+@mixin custom-box-shadow($shadow...) {
+    box-shadow: $shadow;
 }

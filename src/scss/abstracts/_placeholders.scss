@@ -1,0 +1,8 @@
+@use "./functions" as f;
+@use "./mixins" as m;
+
+%link-acao {
+    @include m.font-config(body-medium);
+    color: f.get-color(content-secondary);
+    text-decoration: none;
+}

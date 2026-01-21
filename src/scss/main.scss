@@ -1,7 +1,8 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "./abstracts/index" as *;
 
-// Base - Estilos base e tipografia
+// Base - Reset, estilos base e tipografia
+@use "./base/reset";
 @use "./base/base";
 @use "./base/typography";
 
@@ -16,11 +17,12 @@
 @use "./components/card";
 @use "./components/modal";
 
-// Pages - Seções da página (nossos serviços, nossos produtos, contato e banners)
+// Pages - Seções da página (Banners, nossos serviços, nossos produtos e contato)
 @use "./pages/banners";
 @use "./pages/nossos-servicos";
 @use "./pages/nossos-produtos";
 @use "./pages/contato";
 
-// Themes (dark mode)
+// Themes (dark mode e troca)
+@use "./themes/theme-switch";
 @use "./themes/dark";

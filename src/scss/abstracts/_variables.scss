@@ -1,19 +1,43 @@
+@use "sass:map";
+
+// Função para resgatar a paleta de cor
+@function get-palette($palette) {
+    @return map.get($palettes, $palette);
+}
+
+$palettes: (
+    white: #ffffff,
+    yellow-100: #feffcf,
+    gray-300: #ced4da,
+    gray-500: #7b7574,
+    gray-800: #212529,
+    brown-300: #b29463,
+    brown-500: #8a5e36,
+    brown-700: #462e09,
+);
+
 $colors: (
-    // Background-colors
-    background-primary: #212529,
-    background-secondary: #8a5e36,
+    // Backgrounds
+    surface-primary: get-palette(white),
+    surface-secondary: get-palette(brown-500),
+    surface-inverse: get-palette(gray-800),
 
-    // Text colors
-    text-primary: #feffcf,
-    text-secondary: #462e09,
-    text-tertiary: #ffffff,
+    // Texto e ícones
+    content-primary: get-palette(brown-700),
+    content-secondary: get-palette(gray-500),
+    content-inverse: get-palette(white),
 
-    // Border colors
-    border-primary: #b29463,
-    border-secondary: #7b7574,
+    // Destaques e ações
+    accent-primary: get-palette(yellow-100),
+    accent-secondary: get-palette(brown-300),
+
+    // Bordas
+    border-primary: get-palette(brown-300),
+    border-secondary: get-palette(gray-300),
 );
 
 $breakpoints: (
+    mobile: 428px,
     tablet: 768px,
     laptop: 1024px,
     desktop: 1200px,
@@ -34,7 +58,11 @@ $typography: (
             body-large: 1.5rem,
             body-medium: 1.25rem,
             body-small: 1rem,
-        )
+        ),
+    ),
+    inter: (
+        body-small: 1rem,
+        body-medium: 1.25rem,
     ),
     weights: (
         regular: 400,
