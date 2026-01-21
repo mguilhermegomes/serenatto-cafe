@@ -1,2 +1,17 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.card {
+    @include custom-border(get-color(border-primary));
+    border-radius: 4px;
+    width: 350px;
+
+    &__texto {
+        @include flexbox(column, $gap: 24px);
+        padding: 1.25rem;
+    }
+
+    &__descricao {
+        color: get-color(content-secondary);
+    }
+}
