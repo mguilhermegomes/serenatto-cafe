@@ -5,6 +5,10 @@
     @return map.get(v.$colors, $color);
 }
 
+@function get-text-container($size) {
+    @return map.get(v.$text-containers, $size);
+}
+
 @function get-breakpoint($breakpoint) {
     @return map.get(v.$breakpoints, $breakpoint);
 }

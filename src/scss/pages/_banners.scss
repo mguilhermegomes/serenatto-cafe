@@ -1,2 +1,82 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.banner {
+  margin-top: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .container {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    @include flexbox(column, $items: center, $gap: 2rem);
+  }
+
+  &__descricao {
+    @include responsive(laptop) {
+      @include font-config(body-medium);
+    }
+    > span {
+      @include font-config($weight: bold);
+      @include responsive(laptop) {
+        @include font-config(body-medium, bold);
+      }
+    }
+  }
+
+  &--principal {
+    background-image: url("/public/assets/banners/banner-1.png");
+    background-position: 55% center;
+
+    > .container {
+      @include responsive(tablet) {
+        text-align: start;
+        align-items: start;
+      }
+    }
+
+    .banner__titulo {
+      max-width: get-text-container(s);
+      @include responsive(mobile) {
+        max-width: get-text-container(l);
+      }
+      @include responsive(laptop) {
+        max-width: get-text-container(xxl);
+      }
+    }
+
+    .banner__descricao {
+      max-width: get-text-container(l);
+      @include responsive(laptop) {
+        max-width: get-text-container(2xs);
+      }
+    }
+  }
+
+  &--secundario {
+    background-image: url("/public/assets/banners/banner-2.png");
+
+    .banner__titulo {
+      max-width: get-text-container(m);
+      @include responsive(mobile) {
+        max-width: get-text-container(xxl);
+      }
+      @include responsive(laptop) {
+        max-width: 100%;
+      }
+    }
+
+    .banner__descricao {
+      max-width: get-text-container(xxl);
+      @include responsive(laptop) {
+        max-width: get-text-container(xxxl);
+      }
+    }
+  }
+
+  &--terciario {
+    background-image: url("/public/assets/banners/cafe-graos.png");
+    height: 20rem;
+  }
+}

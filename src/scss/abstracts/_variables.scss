@@ -36,6 +36,17 @@ $colors: (
     border-secondary: get-palette(gray-300),
 );
 
+$text-containers: (
+    xs: 16rem,
+    s: 18rem,
+    m: 20rem,
+    l: 26rem,
+    xl: 28rem,
+    2xs: 32rem,
+    xxl: 37rem,
+    xxxl: 58rem,
+);
+
 $breakpoints: (
     mobile: 428px,
     tablet: 768px,
