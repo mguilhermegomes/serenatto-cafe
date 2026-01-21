@@ -1,2 +1,40 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+h1 {
+    @include font-config(h2, semibold);
+    color: get-color(accent-primary);
+    @include responsive(laptop) {
+        @include font-config(h1);
+    }
+
+    > span {
+        @include responsive(laptop) {
+            @include font-config(h1, semibold);
+        }
+    }
+}
+
+h2 {
+    @include font-config(h2, semibold);
+    color: get-color(accent-primary);
+}
+
+h3 {
+    @include font-config(h3, semibold);
+    color: get-color(content-primary);
+}
+
+h4 {
+    @include font-config(h4, semibold);
+    color: get-color(content-primary);
+}
+
+h5 {
+    @include font-config(h5, bold);
+    color: get-color(content-primary);
+}
+
+p {
+    @include font-config(body-small);
+}

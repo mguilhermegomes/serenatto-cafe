@@ -1,2 +1,27 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+body {
+    @include font-config;
+    background-color: get-color(surface-primary);
+    color: get-color(content-inverse);
+    line-height: 1.2;
+    width: 100%;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    @extend %link-acao;
+}
+
+label,
+button {
+    cursor: pointer;
+    border: none;
+}
