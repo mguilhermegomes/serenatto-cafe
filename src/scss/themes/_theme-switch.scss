@@ -1,0 +1,44 @@
+// Abstracts (variáveis, funções, mixins e placeholders)
+@use "../abstracts/index" as *;
+
+.modo-noturno {
+    &__switch {
+        @include flexbox($justify: flex-start, $items: center, $gap: 8px);
+    }
+
+    &__toggle {
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        padding: 0 0.25rem;
+        @include custom-border(get-color(border-primary));
+        @include flexbox($justify: flex-start, $items: center);
+        > span {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+
+    &__texto {
+        @extend %link-acao;
+        user-select: none;
+    }
+
+    &--ativado {
+        // Estado ativado, altere o estilo para refletir quando ativado
+        background-color: get-color(accent-secondary);
+        > span {
+            background-color: get-color(surface-primary);
+        }
+    }
+
+    &--desativado {
+        // Estado desativado, estilo do botão quando desmarcado
+        background: transparent;
+        > span {
+            background-color: get-color(surface-secondary);
+        }
+    }
+}
