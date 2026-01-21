@@ -1,2 +1,42 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.nav {
+    &__lista {
+        @include flexbox($items: center, $gap: 30px);
+    }
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    padding: 0.5rem 0.75rem;
+    background-color: get-color(surface-primary);
+    @include custom-box-shadow(4px 4px 15px rgba(0, 0, 0, 0.4));
+    @include responsive(tablet) {
+        width: 410px;
+    }
+    @include responsive(laptop) {
+        display: none;
+    }
+
+    &__top {
+        @include flexbox($justify: space-between, $items: center);
+    }
+
+    &__fechar {
+        color: get-color(content-secondary);
+        background: transparent;
+        @include font-config(h4);
+    }
+}
+
+.sidebar-nav {
+    margin: 1rem 0;
+    &__lista {
+        @include flexbox(column, $gap: 16px);
+    }
+}

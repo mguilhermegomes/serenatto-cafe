@@ -1,2 +1,33 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.cabecalho {
+    position: relative;
+    padding-top: 3rem;
+    .container {
+        @include flexbox($justify: space-between, $items: center);
+    }
+
+    &__menu {
+        width: 40px;
+        height: 40px;
+        margin-top: 1rem;
+        padding: 1rem 1.5rem;
+        background-color: transparent;
+        background-image: url("/public/assets/header/menu-hamburguer.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        @include custom-border(get-color(border-secondary));
+        @include responsive(laptop) {
+            display: none;
+        }
+    }
+
+    &__acoes {
+        display: none;
+        margin-top: 1rem;
+        @include responsive(laptop) {
+            @include flexbox($items: center, $gap: 30px);
+        }
+    }
+}

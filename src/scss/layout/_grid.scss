@@ -1,2 +1,13 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+ .container {
+    width: 100%;
+    max-width: 75rem;
+    padding-inline: 1.5rem;
+    margin-inline: auto;
+ }
+
+.invisible {
+    display: none;
+}
