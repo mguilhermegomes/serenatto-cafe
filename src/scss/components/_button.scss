@@ -7,7 +7,10 @@
     background-color: get-color(surface-secondary);
     color: get-color(content-inverse);
     border-radius: 4px;
-    width: 300px;
+    width: 250px;
     padding: 0.625rem 0;
     display: block;
+    @include responsive(mobile) {
+        width: 300px;
+    }
 }

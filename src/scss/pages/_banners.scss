@@ -2,7 +2,7 @@
 @use "../abstracts/index" as *;
 
 .banner {
-  margin-top: 2rem;
+  margin-top: 3.75rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -26,6 +26,7 @@
   }
 
   &--principal {
+    margin-top: 2rem;
     background-image: url("/public/assets/banners/banner-1.png");
     background-position: 55% center;
 

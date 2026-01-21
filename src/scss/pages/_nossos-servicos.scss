@@ -1,2 +1,22 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.nossos-servicos {
+    text-align: center;
+    margin-top: 3.75rem;
+
+    .container {
+        padding-inline: 0rem;
+        @include responsive(mobile) {
+            padding-inline: 1.5rem;
+        }
+    }
+
+    &__titulo {
+        margin-bottom: 2.5rem;
+    }
+
+    &__card-container {
+        @include flexbox($items: center, $gap: 40px, $wrap: wrap);
+    }
+}
