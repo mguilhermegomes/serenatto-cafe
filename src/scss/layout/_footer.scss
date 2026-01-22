@@ -1,2 +1,20 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.rodape {
+    margin-top: $section-space;
+    padding: 1.5rem 0;
+    text-align: center;
+    background-color: get-color(surface-secondary);
+
+    .container {
+        @include flexbox(column-reverse, $items: center, $gap: 16px);
+        @include responsive(laptop) {
+            @include flexbox(column, $items: center, $gap: 24px);
+        }
+    }
+
+    &__icons-lista {
+        @include flexbox($gap: 32px);
+    }
+}
