@@ -30,10 +30,12 @@ $colors: (
     // Destaques e ações
     accent-primary: get-palette(yellow-100),
     accent-secondary: get-palette(brown-300),
+    accent-inverse: get-palette(gray-800),
 
     // Bordas
     border-primary: get-palette(brown-300),
     border-secondary: get-palette(gray-300),
+    border-tertiary: get-palette(gray-500),
 );
 
 $text-containers: (
@@ -72,8 +74,11 @@ $typography: (
         ),
     ),
     inter: (
-        body-small: 1rem,
-        body-medium: 1.25rem,
+        family: ("Inter", sans-serif),
+        sizes: (
+            body-small: 1rem,
+            body-medium: 1.25rem,
+        ),
     ),
     weights: (
         regular: 400,
@@ -82,3 +87,6 @@ $typography: (
         bold: 700,
     ),
 );
+
+// // Espaço entre as seções da página
+// $section-space: 6rem;

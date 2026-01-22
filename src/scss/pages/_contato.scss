@@ -1,2 +1,33 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.contato {
+    margin-top: 3.75rem;
+
+    &__container {
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-inline: auto;
+        max-width: 48.5rem;
+        @include custom-border(get-color(border-tertiary));
+    }
+
+    &__titulo {
+        margin-bottom: 2rem;
+    }
+}
+
+.form {
+    //@include flexbox(column, $gap: 24px);
+
+    &__campo {
+        > input,
+        > select {
+            @extend %form-campo;
+        }
+    }
+
+    &__campo-botao {
+        width: 100%;
+    }
+}

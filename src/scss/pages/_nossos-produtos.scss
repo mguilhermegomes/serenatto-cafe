@@ -1,2 +1,18 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+// .nossos-produtos {
+
+//     &__produtos-container {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//         align-items: center;
+//     }
+
+//     .produto {
+//         > img {
+//             width: 350px;
+//             height: 324px;
+//         }
+//     }
+// }

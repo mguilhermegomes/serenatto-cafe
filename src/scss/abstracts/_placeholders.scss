@@ -6,3 +6,22 @@
     color: f.get-color(content-secondary);
     text-decoration: none;
 }
+
+%form-campo {
+    background: transparent;
+    color: f.get-color(accent-inverse);
+    padding: 0.5rem 0.875rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-radius: 4px;
+    @include m.custom-border(f.get-color(border-secondary));
+    @include m.font-config(body-small, regular, inter);
+
+    &::placeholder {
+        color: f.get-color(content-secondary);
+    }
+
+    &:focus {
+        outline: 2px solid f.get-color(content-primary);
+    }
+}
