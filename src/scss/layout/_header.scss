@@ -3,7 +3,7 @@
 
 .cabecalho {
     position: relative;
-    padding-top: 2rem;
+    padding-top: 1.8rem;
     .container {
         @include flexbox($justify: space-between, $items: center);
     }

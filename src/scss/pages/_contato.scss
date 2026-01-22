@@ -2,7 +2,7 @@
 @use "../abstracts/index" as *;
 
 .contato {
-    margin-top: 3.75rem;
+    margin-top: $section-space;
 
     &__container {
         border-radius: 8px;
@@ -18,8 +18,6 @@
 }
 
 .form {
-    //@include flexbox(column, $gap: 24px);
-
     &__campo {
         > input,
         > select {
