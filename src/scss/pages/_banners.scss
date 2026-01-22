@@ -8,9 +8,8 @@
   background-position: center;
 
   .container {
-    text-align: center;
     padding: 4.5rem 1.5rem;
-    @include flexbox(column, $items: center, $gap: 2rem);
+    @include flexbox(column, $gap: 2rem);
   }
 
   &__descricao {
@@ -30,16 +29,9 @@
     background-image: url("/public/assets/banners/banner-1.png");
     background-position: 55% center;
 
-    > .container {
-      @include responsive(tablet) {
-        text-align: start;
-        align-items: start;
-      }
-    }
-
     .banner__titulo {
       max-width: get-text-container(s);
-      @include responsive(mobile) {
+      @include responsive(tablet) {
         max-width: get-text-container(l);
       }
       @include responsive(laptop) {
@@ -58,9 +50,13 @@
   &--secundario {
     background-image: url("/public/assets/banners/banner-2.png");
 
+    .container {
+        text-align: center;
+        align-items: center;
+    }
+
     .banner__titulo {
-      max-width: get-text-container(m);
-      @include responsive(mobile) {
+      @include responsive(tablet) {
         max-width: get-text-container(xxl);
       }
       @include responsive(laptop) {

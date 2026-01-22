@@ -2,8 +2,11 @@
 @use "../abstracts/index" as *;
 
 h1 {
-    @include font-config(h2, semibold);
+    @include font-config(h3, semibold);
     color: get-color(accent-primary);
+    @include responsive(tablet) {
+        @include font-config(h2, semibold);
+    }
     @include responsive(laptop) {
         @include font-config(h1);
     }
@@ -16,18 +19,27 @@ h1 {
 }
 
 h2 {
-    @include font-config(h2, semibold);
+    @include font-config(h3, semibold);
     color: get-color(accent-primary);
+    @include responsive(tablet) {
+        @include font-config(h2, semibold);
+    }
 }
 
 h3 {
-    @include font-config(h3, semibold);
+    @include font-config(h4, semibold);
     color: get-color(content-primary);
+    @include responsive(tablet) {
+        @include font-config(h3, semibold);
+    }
 }
 
 h4 {
-    @include font-config(h4, semibold);
+    @include font-config(h5, semibold);
     color: get-color(content-primary);
+    @include responsive(tablet) {
+        @include font-config(h4, semibold);
+    }
 }
 
 h5 {
