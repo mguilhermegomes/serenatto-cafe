@@ -85,7 +85,7 @@
               />
             </a>
             <button
-              class="sidebar__fechar"
+              class="btn--fechar-x sidebar__fechar"
               id="menu-fechar"
               aria-label="Fechar menu"
             >
@@ -210,7 +210,7 @@
               />
               <h4 class="produto__titulo">Cafés Tradicionais</h4>
             </div>
-            <div class="produto">
+            <div class="produto" data-modal="modal-2">
               <img
                 src="./public/assets/produtos/cafe-especial.png"
                 alt="Xícara de café especial"
@@ -355,14 +355,12 @@
       </div>
     </footer>
     <!--Modal 1-->
-    <div id="modal-background-1" class="modal-background"></div>
     <dialog id="modal-1" class="modal">
       <div class="modal__content">
         <div class="modal__header">
-          <h2 class="modal__titulo">Cafés Tradicionais</h2>
+          <h3 class="modal__titulo">Cafés Tradicionais</h3>
           <button
-            id="modal-botao-fechar"
-            class="modal__fechar-botao"
+            class="btn--fechar-x modal__fechar"
             aria-label="Fechar modal"
           >
             &times;
@@ -389,8 +387,7 @@
         </div>
         <div class="modal__footer">
           <button
-            id="modal-botao-fechar-footer"
-            class="modal__fechar-botao-footer"
+            class="btn modal__fechar"
             aria-label="Fechar modal"
           >
             Fechar janela
@@ -399,14 +396,12 @@
       </div>
     </dialog>
     <!--Modal 2-->
-    <div id="modal-background-2" class="modal-background"></div>
     <dialog id="modal-2" class="modal">
       <div class="modal__content">
         <div class="modal__header">
-          <h2 class="modal__titulo">Cafés Especiais</h2>
+          <h3 class="modal__titulo">Cafés Especiais</h3>
           <button
-            id="modal-botao-fechar"
-            class="modal__fechar-botao"
+            class="btn--fechar-x modal__fechar"
             aria-label="Fechar modal"
           >
             &times;
@@ -436,8 +431,7 @@
         </div>
         <div class="modal__footer">
           <button
-            id="modal-botao-fechar-footer"
-            class="modal__fechar-botao-footer"
+            class="btn modal__fechar"
             aria-label="Fechar modal"
           >
             Fechar janela

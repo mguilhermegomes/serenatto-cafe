@@ -1,18 +1,35 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
 
-// .nossos-produtos {
+.nossos-produtos {
+    margin-top: $section-space;
+    text-align: center;
 
-//     &__produtos-container {
-//         display: grid;
-//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//         align-items: center;
-//     }
+    &__produtos-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+        row-gap: 70px;
+    }
 
-//     .produto {
-//         > img {
-//             width: 350px;
-//             height: 324px;
-//         }
-//     }
-// }
+    &__titulo {
+        margin-bottom: 2.5rem;
+    }
+
+    .produto {
+        @include flexbox(column, $items: center);
+        @include custom-transition(box-shadow);
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            cursor: pointer;
+        }
+
+        &:hover,
+        &:focus {
+            @include custom-box-shadow(4px 4px 15px rgba(0, 0, 0, 0.4));
+        }
+    }
+}

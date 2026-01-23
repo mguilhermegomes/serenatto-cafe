@@ -1,28 +1,29 @@
-import './scss/main.scss'
+import "./scss/main.scss";
 
 const menuHamburguer = document.getElementById("menu-hamburguer");
 const menuFechar = document.getElementById("menu-fechar");
 const sidebar = document.querySelector(".sidebar");
 const darkThemeButton = document.getElementById("modo-noturno-botao-toggle");
-const darkThemeButtonSidebar = document.getElementById("modo-noturno-botao-toggle-sidebar");
-
+const darkThemeButtonSidebar = document.getElementById(
+  "modo-noturno-botao-toggle-sidebar",
+);
 
 menuHamburguer.addEventListener("click", () => {
-    sidebar.classList.toggle("invisible");
+  sidebar.classList.toggle("invisible");
 });
 
 menuFechar.addEventListener("click", () => {
-    sidebar.classList.add("invisible");
+  sidebar.classList.add("invisible");
 });
 
 darkThemeButton.addEventListener("click", () => {
-    darkThemeButton.classList.toggle("modo-noturno--ativado");
-    darkThemeButton.classList.toggle("modo-noturno--desativado");
+  darkThemeButton.classList.toggle("modo-noturno--ativado");
+  darkThemeButton.classList.toggle("modo-noturno--desativado");
 });
 
 darkThemeButtonSidebar.addEventListener("click", () => {
-    darkThemeButtonSidebar.classList.toggle("modo-noturno--ativado");
-    darkThemeButtonSidebar.classList.toggle("modo-noturno--desativado");
+  darkThemeButtonSidebar.classList.toggle("modo-noturno--ativado");
+  darkThemeButtonSidebar.classList.toggle("modo-noturno--desativado");
 });
 
 document.addEventListener("click", (event) => {

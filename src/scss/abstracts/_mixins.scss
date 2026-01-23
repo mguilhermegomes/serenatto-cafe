@@ -30,3 +30,7 @@
 @mixin custom-box-shadow($shadow...) {
     box-shadow: $shadow;
 }
+
+@mixin custom-transition($property, $type: ease, $duration: 0.3s) {
+    transition: $property $duration $type;
+} 
