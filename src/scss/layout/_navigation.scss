@@ -26,12 +26,6 @@
     &__top {
         @include flexbox($justify: space-between, $items: center);
     }
-
-    &__fechar {
-        color: get-color(content-secondary);
-        background: transparent;
-        @include font-config(h4);
-    }
 }
 
 .sidebar-nav {

@@ -37,3 +37,33 @@ document.addEventListener("click", (event) => {
     menuHamburguer.classList.remove("invisible");
   }
 });
+
+// abrir modal
+document.querySelectorAll("[data-modal]").forEach((element) => {
+  element.addEventListener("click", () => {
+    const modal = document.getElementById(element.dataset.modal);
+
+    if (!modal.open) {
+      document.body.classList.add("modal-aberto");
+      modal.showModal();
+      modal.focus();
+    }
+  });
+});
+
+// fechar modal (botões)
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("close", () => {
+    document.body.classList.remove("modal-aberto");
+  });
+
+  modal.querySelectorAll(".modal__fechar").forEach((btn) => {
+    btn.addEventListener("click", () => modal.close());
+  });
+});
+
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.close();
+  });
+});

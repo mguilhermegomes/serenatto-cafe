@@ -1,2 +1,40 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+.modal-aberto {
+    overflow: hidden;
+}
+
+.modal {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    max-width: 800px;
+    min-width: 300px;
+    padding: 1rem;
+    margin: auto 1rem;
+    @include responsive(modal-margin) {
+        margin: auto;
+    }
+
+    &__header {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid get-color(border-secondary);
+        @include flexbox($justify: space-between, $items: center);
+    }
+
+    &__body {
+        padding: 1rem 0;
+        @include flexbox(column, $items: center, $gap: 16px);
+    }
+
+    &__footer {
+        padding-top: 1rem;
+        border-top: 1px solid get-color(border-secondary);
+        @include flexbox($items: center);
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
