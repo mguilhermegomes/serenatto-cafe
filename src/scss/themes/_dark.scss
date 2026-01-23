@@ -1,2 +1,46 @@
 // Abstracts (variáveis, funções, mixins e placeholders)
 @use "../abstracts/index" as *;
+
+body.dark-theme {
+  background-color: get-color(surface-inverse);
+
+    aside {
+    background-color: get-color(surface-inverse);
+    }
+
+  h3,
+  h4,
+  h5,
+  p,
+  a {
+    color: get-color(content-inverse);
+  }
+
+  input,
+  select {
+    @extend %form-campo-dark;
+  }
+
+  dialog {
+    background-color: get-color(surface-inverse);
+  }
+
+  footer,
+  .btn {
+    background-color: get-color(accent-secondary);
+  }
+
+  .btn--fechar-x {
+    color: get-color(accent-tertiary);
+  }
+
+  .cabecalho__menu {
+    background-image: url("/public/assets/header/menu-hamburguer-dark-theme.svg");
+    @include custom-border(get-color(border-tertiary));
+  }
+
+  .produto:hover,
+  .produto:focus {
+    @include custom-box-shadow(2px 2px 15px rgba(255, 255, 255, 0.5));
+  }
+}

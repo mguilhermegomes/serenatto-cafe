@@ -3,10 +3,7 @@ import "./scss/main.scss";
 const menuHamburguer = document.getElementById("menu-hamburguer");
 const menuFechar = document.getElementById("menu-fechar");
 const sidebar = document.querySelector(".sidebar");
-const darkThemeButton = document.getElementById("modo-noturno-botao-toggle");
-const darkThemeButtonSidebar = document.getElementById(
-  "modo-noturno-botao-toggle-sidebar",
-);
+const darkThemeButtons = document.querySelectorAll(".modo-noturno__toggle");
 
 menuHamburguer.addEventListener("click", () => {
   sidebar.classList.toggle("invisible");
@@ -16,14 +13,17 @@ menuFechar.addEventListener("click", () => {
   sidebar.classList.add("invisible");
 });
 
-darkThemeButton.addEventListener("click", () => {
-  darkThemeButton.classList.toggle("modo-noturno--ativado");
-  darkThemeButton.classList.toggle("modo-noturno--desativado");
-});
+darkThemeButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    // Alterna a classe 'modo-noturno--ativado' e 'modo-noturno--desativado' para todos os botões
+    darkThemeButtons.forEach(btn => {
+      btn.classList.toggle("modo-noturno--ativado");
+      btn.classList.toggle("modo-noturno--desativado");
+    });
 
-darkThemeButtonSidebar.addEventListener("click", () => {
-  darkThemeButtonSidebar.classList.toggle("modo-noturno--ativado");
-  darkThemeButtonSidebar.classList.toggle("modo-noturno--desativado");
+    // Alterna o tema no body
+    document.body.classList.toggle("dark-theme");
+  });
 });
 
 document.addEventListener("click", (event) => {

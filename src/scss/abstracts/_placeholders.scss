@@ -25,3 +25,18 @@
         outline: 2px solid f.get-color(content-primary);
     }
 }
+
+%form-campo-dark {
+    color: f.get-color(content-inverse);
+    @include m.custom-border(f.get-color(border-secondary));
+
+    &::placeholder {
+        color: f.get-color(accent-tertiary);
+    }
+
+    &:focus {
+        outline: 2px solid f.get-color(border-primary);
+    }
+
+    @extend %form-campo;
+}

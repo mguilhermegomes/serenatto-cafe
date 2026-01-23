@@ -18,13 +18,6 @@
 }
 
 .form {
-    &__campo {
-        > input,
-        > select {
-            @extend %form-campo;
-        }
-    }
-
     &__campo-botao {
         width: 100%;
     }

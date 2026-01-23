@@ -25,3 +25,8 @@ button {
     cursor: pointer;
     border: none;
 }
+
+input,
+select {
+    @extend %form-campo;
+}
