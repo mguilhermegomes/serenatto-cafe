@@ -30,19 +30,19 @@
     background-position: 55% center;
 
     .banner__titulo {
-      max-width: get-text-container(s);
+      max-width: get-text-container(xs);
       @include responsive(tablet) {
-        max-width: get-text-container(l);
+        max-width: get-text-container(s);
       }
       @include responsive(laptop) {
-        max-width: get-text-container(xxl);
+        max-width: get-text-container(xl);
       }
     }
 
     .banner__descricao {
-      max-width: get-text-container(l);
+      max-width: get-text-container(s);
       @include responsive(laptop) {
-        max-width: get-text-container(2xs);
+        max-width: get-text-container(l);
       }
     }
   }
@@ -57,7 +57,7 @@
 
     .banner__titulo {
       @include responsive(tablet) {
-        max-width: get-text-container(xxl);
+        max-width: get-text-container(xl);
       }
       @include responsive(laptop) {
         max-width: 100%;
@@ -65,9 +65,9 @@
     }
 
     .banner__descricao {
-      max-width: get-text-container(xxl);
+      max-width: get-text-container(xl);
       @include responsive(laptop) {
-        max-width: get-text-container(xxxl);
+        max-width: get-text-container(xxl);
       }
     }
   }

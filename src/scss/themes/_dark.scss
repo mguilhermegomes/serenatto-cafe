@@ -4,9 +4,9 @@
 body.dark-theme {
   background-color: get-color(surface-inverse);
 
-    aside {
+  aside {
     background-color: get-color(surface-inverse);
-    }
+  }
 
   h3,
   h4,
@@ -42,5 +42,12 @@ body.dark-theme {
   .produto:hover,
   .produto:focus {
     @include custom-box-shadow(2px 2px 15px rgba(255, 255, 255, 0.5));
+  }
+
+  .nav__link:hover,
+  .nav__link:focus,
+  .modo-noturno__texto:hover,
+  .modo-noturno__texto:focus {
+    color: get-color(accent-secondary);
   }
 }

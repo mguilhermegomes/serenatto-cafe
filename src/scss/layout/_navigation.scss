@@ -5,6 +5,11 @@
     &__lista {
         @include flexbox($items: center, $gap: 30px);
     }
+
+    &__link:hover,
+    &__link:focus {
+        color: get-color(content-primary);
+    }
 }
 
 .sidebar {
