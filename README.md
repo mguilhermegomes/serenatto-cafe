@@ -24,7 +24,7 @@ O objetivo principal foi aplicar boas práticas modernas de CSS, organização d
 
 ## 🌐 Acesso ao Projeto
 - **👉 Deploy na Vercel:**
-[Acesse a aplicação do projeto](https://mguilhermegomes-serenatto-cafe.vercel.app)
+[Acesse o projeto](https://mguilhermegomes-serenatto-cafe.vercel.app)
 
 - **👉 Repositório no GitHub:**
 [Acesse o repositório do projeto](https://github.com/mguilhermegomes/serenatto-cafe)
